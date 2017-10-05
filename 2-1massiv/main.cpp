@@ -8,34 +8,33 @@ int main()
     int i = 0;
     int summa = 0;
     float srednee;
+    int naib;
+    int naim;
+
     for (i = 0; i < 10; i++)
     {
         std::cin >> array[i];
-    }
-    for (i = 0; i < 10; i++)
-    {
         summa = summa + array[i];
-    }
-    srednee = summa/10.0;
-
-    int naib = array[1];
-    int naim = array[1];
-    for (i = 0; i < 10; i++)
-    {
-        if (naib < array[i])
+        if (i == 0)
         {
             naib = array[i];
-        }
-
-    }
-    for (i = 0; i < 10; i++)
-    {
-        if (naim > array[i])
-        {
             naim = array[i];
         }
-
+        else
+        {
+            if (array[i] > naib)
+            {
+                naib = array[i];
+            }
+            if (array[i] < naim)
+            {
+                naim = array[i];
+            }
+        }
     }
+
+    srednee = summa/10.0;
+
     std::cout << summa << std::endl;
     std::cout << srednee << std::endl;
     std::cout << naib << std::endl;
