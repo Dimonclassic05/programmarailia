@@ -4,19 +4,23 @@
 
 int main()
 {
-int i;
-int j;
-int array[i][j];
+int array[3][3];
 int sum = 0 ;
-for ( j = 0; j < 3; ++j)
+for ( int j = 0; j < 3; ++j)
 {
-    for ( i = 0; i < 3; ++i)
+    for ( int i = 0; i < 3; ++i)
     {
         std::cout << " enter nine numbers " ;
         std::cin >> array[i][j];
-        if (((i + j) % 2 == 0) || (array[i][j] > 5) || (array[i][j] % 3 != 0))
+        if ((i + j) % 2 == 0)
         {
-          sum += array[i][j];
+            if (array[i][j] > 5)
+            {
+                if (array[i][j] % 3 != 0)
+                {
+                    sum += array[i][j];
+                }
+            }
         }
     }
 }
