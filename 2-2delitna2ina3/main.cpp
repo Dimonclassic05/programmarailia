@@ -9,16 +9,13 @@ int main()
     for (i = 0; i < 20; i++)
     {
         std::cin >> array[i];
-    }
-    for (i = 0; i < 20; i++)
-    {
         if (i % 2 == 0)
             {
-             array[i] = array[i]/2.0;
+             array[i] /= 2.0;
             }
         else
         {
-            array[i] = array[i]/3.0;
+            array[i] /= 3.0;
         }
     }
     for (i = 0; i < 20; i++)
