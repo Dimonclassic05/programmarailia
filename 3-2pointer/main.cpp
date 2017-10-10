@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 
-void exchange(int a, int b);
+void exchange(int* a, int* b);
 
 int main()
 {
@@ -9,18 +9,17 @@ int main()
     int value2;
     std::cout << "enter two numbers";
     std::cin >> value1 >> value2;
-    exchange(value1, value2);
+    exchange( &value1 , &value2 );
     std::cout << value1 << value2;
     system("pause");
     return 0;
 }
 
-void exchange (int a, int b)
+void exchange (int* a, int* b)
 {
-    int* pointerb = &b;
-    int *pointer = new int;;
-    *pointer = a;
-    a = *pointerb;
-    b = *pointer;
-    std::cout << a << b;
+
+    int* pointer = new int;
+    *pointer = *a;
+    *a = *b;
+    *b = *pointer;
 }
