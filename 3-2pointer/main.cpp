@@ -18,8 +18,7 @@ int main()
 void exchange (int* a, int* b)
 {
 
-    int* pointer = new int;
-    *pointer = *a;
+    int c = *a;
     *a = *b;
-    *b = *pointer;
+    *b = c;
 }
