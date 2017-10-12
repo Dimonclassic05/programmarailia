@@ -10,31 +10,31 @@ int main()
     int three;
     std::cout << "enter three numbers";
     std::cin >> one >> two >> three;
-    int value = secondary( one , two , three );
+    int value = secondary(one,two,three);
     std::cout << value;
     system("pause");
     return 0;
 }
 
-secondary(int a , int b ,int c )
+int secondary(int a,int b,int c)
 {
-    if (((a > b) & ( a < c ))||((a > c) & (a < b)))
+if (a > b)
+{
+    if (b > c)
+    {
+        return b;
+    }
+    if (c > a)
     {
         return a;
     }
-    else
+}
+else
+{
+    if (b < c)
     {
-        if (((b > a) & ( b < c ))||((b > c) & (b < a)))
-        {
-            return b;
-        }
-        else
-        {
-            if (((c > a) & ( c < b ))||((c > a) & (c < b)))
-            {
-                return c;
-            }
-        }
+        return b;
     }
-
+    return c;
+}
 }
