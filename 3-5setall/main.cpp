@@ -1,13 +1,13 @@
 #include <iostream>
 #include <cstdlib>
 
-void setall(int* array,int size);
+void setall(int* array,int size, int value);
 
 int main()
 {
     int array[4];
 
-    setall(array, 5);
+    setall(array, 4, 5);
 
     for (int i = 0; i < 4; i++)
     {
@@ -18,9 +18,9 @@ int main()
     return 0;
 }
 
-void setall(int* array,int value)
+void setall(int* array,int size,int  value)
 {
-    for (int i = 0; i < value; i++)
+    for (int i = 0; i < size; i++)
         {
             array[i] = value;
         }
